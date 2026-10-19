@@ -32,7 +32,8 @@ The action uses Bash and supports Linux and macOS runners.
 
 ## Tests
 
-Run `bun test` with Go and golangci-lint available. The tests execute the actual
+Run `go test ./...` with Go and golangci-lint available. The tests read the action
+manifest using `go.yaml.in/yaml/v3` and execute the actual
 commands from the composite against isolated Go fixtures and cover failures as
 well as a passing module. The GitHub workflow also executes the full composite,
 including tool setup.
